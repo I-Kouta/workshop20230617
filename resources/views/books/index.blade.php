@@ -34,6 +34,7 @@
               <td>{{ $book->author->name }}</td>
               <td>{{ $book->price}}円</td>
               <td>{{ $book->created_at }}</td>
+              <td><a class="btn btn-primary" href="/book/{{$book->id}}/update-form">更新</a></td>
             </tr>
             @endforeach
         </table>
