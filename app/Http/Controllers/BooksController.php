@@ -39,9 +39,9 @@ class BooksController extends Controller
 
     public function update(Request $request){
         // dd($request);
-        $id = $request->input("id");
-        $upTitle = $request->input("upTitle");
-        $upPrice = $request->input("upPrice");
+        $id = $request->id;
+        $upTitle = $request->upTitle;
+        $upPrice = $request->upPrice;
         Book::where("id", $id)->update([
             'title' => $upTitle,
             'price' => $upPrice
