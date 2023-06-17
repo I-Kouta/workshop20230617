@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class AuthorsController extends Controller
 {
-    //
+    public function authorCreate(Request $request){
+        dd($request);
+        return redirect("/index");
+    }
 }

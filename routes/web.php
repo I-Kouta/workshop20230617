@@ -17,4 +17,4 @@ Route::get('/', function () {
 
 Route::get("/index", "BooksController@index");
 Route::get("/create-form", "BooksController@createForm");
-Route::post("/author/create", "BooksController@create");
+Route::post("/author/create", "AuthorsController@authorCreate");
