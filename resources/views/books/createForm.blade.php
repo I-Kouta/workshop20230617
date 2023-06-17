@@ -22,6 +22,7 @@
           <button type="submit" class="btn btn-success pull-right">追加</button>
         </form>
       </div>
+
       <div class="container">
         <h2 class="page-header">本を登録する</h2>
         <div class="form-group">
