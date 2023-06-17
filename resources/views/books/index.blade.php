@@ -26,6 +26,15 @@
                 <th></th>
                 <th></th>
             </tr>
+            @foreach ($books as $book)
+            <tr>
+              <td>{{ $book->id }}</td>
+              <td>{{ $book->title }}</td>
+              <td>著者名は後ほど解説します</td>
+              <td>{{ $book->price}}円</td>
+              <td>{{ $book->created_at }}</td>
+            </tr>
+            @endforeach
         </table>
     </div>
     <footer>
@@ -33,13 +42,3 @@
     </footer>
 </body>
 </html>
-<!-- ② -->
-@foreach ($books as $book)
-            <tr>
-                <td>{{ $book->id }}</td>
-                <td>{{ $book->title }}</td>
-                <td>著者名は後ほど解説します</td>
-                <td>{{ $book->price}}円</td>
-                <td>{{ $book->created_at }}</td>
-            </tr>
-@endforeach
