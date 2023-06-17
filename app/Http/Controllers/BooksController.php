@@ -36,4 +36,16 @@ class BooksController extends Controller
         $books = Book::where("id", $id)->first();
         return view("books.updateForm", compact("books"));
     }
+
+    public function update(Request $request){
+        // dd($request);
+        $id = $request->input("id");
+        $upTitle = $request->input("upTitle");
+        $upPrice = $request->input("upPrice");
+        Book::where("id", $id)->update([
+            'title' => $upTitle,
+            'price' => $upPrice
+        ]);
+        return redirect("/index");
+    }
 }

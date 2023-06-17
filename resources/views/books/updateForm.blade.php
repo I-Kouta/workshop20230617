@@ -19,7 +19,7 @@
       <div class="form-group">
         <form action="/book/update" method="post">
         @csrf
-        <input type="hidden" name="id" value="">
+        <input type="hidden" name="id" value="{{ $books->id }}">
         <label for="">本のタイトル</label>
         <input type="text" name="upTitle" value="{{ $books->title }}" class="form-control" required>
         <label for="">本の金額</label>
