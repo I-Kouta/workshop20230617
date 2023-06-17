@@ -30,7 +30,7 @@
             <tr>
               <td>{{ $book->id }}</td>
               <td>{{ $book->title }}</td>
-              <td>著者名は後ほど解説します</td>
+              <td>{{ $book->author->name }}</td>
               <td>{{ $book->price}}円</td>
               <td>{{ $book->created_at }}</td>
             </tr>
