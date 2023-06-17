@@ -12,4 +12,8 @@ class BooksController extends Controller
         $books = Book::with("author")->get();
         return view("books.index", compact("books"));
     }
+
+    public function createForm(){
+        return view("books.createForm");
+    }
 }
