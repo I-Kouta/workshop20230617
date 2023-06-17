@@ -17,7 +17,7 @@
       <h2 class="page-header">著者を登録する</h2>
       <div class="form-group">
         <form action="/author/create" method="post">
-          @csrf
+          @csrf <!-- 脆弱性対策 -->
           <input type="text" name="authorName" value="" class="form-control" placeholder="著者名" required>
           <button type="submit" class="btn btn-success pull-right">追加</button>
         </form>

@@ -16,4 +16,9 @@ class BooksController extends Controller
     public function createForm(){
         return view("books.createForm");
     }
+
+    public function create(Request $request){
+        dd($request);
+        return redirect("/index");
+    }
 }
