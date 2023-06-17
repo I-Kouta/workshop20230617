@@ -13,7 +13,14 @@ class Books extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('books', function (Blueprint $table) {
+            $table->integer('id')->autoIncrement();
+            $table->integer('author_id');
+            $table->string('title');
+            $table->integer('price');
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('current_timestamp on update current_timestamp'));
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class Books extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('books');
     }
 }
